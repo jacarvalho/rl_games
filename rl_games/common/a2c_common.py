@@ -257,7 +257,7 @@ class A2CBase(BaseAlgorithm):
         # soft augmentation not yet supported
         assert not self.has_soft_aug
 
-    def trancate_gradients_and_step(self):
+    def truncate_gradients_and_step(self):
         if self.multi_gpu:
             # batch allreduce ops: see https://github.com/entity-neural-network/incubator/pull/220
             all_grads_list = []
